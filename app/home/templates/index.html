@@ -1,0 +1,276 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<link rel="stylesheet" href="/static/assets/plugins/chart-morris/css/morris.css">
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <!-- [ Main Content ] start -->
+                    <div class="row">
+                        <!--[ daily sales section ] start-->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card daily-sales">
+                                <div class="card-block">
+                                    <h6 class="mb-4">Daily Verified Users</h6>
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-9">
+                                            <h3 class="f-w-300 d-flex align-items-center m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>24</h3>
+                                        </div>
+
+                                        <div class="col-3 text-right">
+                                            <p class="m-b-0">+3%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--[ daily sales section ] end-->
+                        <!--[ Monthly  sales section ] starts-->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card Monthly-sales">
+                                <div class="card-block">
+                                    <h6 class="mb-4">Monthly Verified Users</h6>
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-9">
+                                            <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>321</h3>
+                                        </div>
+                                        <div class="col-3 text-right">
+                                            <p class="m-b-0">+30%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--[ Monthly  sales section ] end-->
+                        <!--[ year  sales section ] starts-->
+                        <div class="col-md-12 col-xl-4">
+                            <div class="card yearly-sales">
+                                <div class="card-block">
+                                    <h6 class="mb-4">Yearly Verified Users</h6>
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-9">
+                                            <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>1394</h3>
+                                        </div>
+                                        <div class="col-3 text-right">
+                                            <p class="m-b-0">+80%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--[ year  sales section ] end-->
+                        <!--[ Recent Users ] start-->
+                        <div class="col-xl-12 col-md-6">
+                            <div class="card Recent-Users">
+                                <div class="card-header">
+                                    <h5>Recent Verifications</h5>
+                                </div>
+                                <div class="card-block px-0 py-3">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>User</th>
+                                                    <th>Brand</th>
+                                                    <th>Source</th>
+                                                    <th>Campaign</th>
+                                                    <th>Created At</th>
+                                                    <th>State</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for key, row in df.head().iterrows() %}
+                                                <tr class="unread">
+                                                    <td><img class="rounded-circle" style="width:40px;" src="/static/assets/images/user/avatar-1.jpg" alt="activity-user"></td>
+                                                    <td>
+                                                        <h6 class="mb-1">{{ row['Email'] }}</h6>
+                                                        <p class="m-0">{{ row['Verification Type'] }}</p>
+                                                    </td>
+                                                    <td>
+                                                        <h6 class="mb-1">{{ row['Brand'] }}</h6>
+                                                    </td>
+                                                    <td>
+                                                        <h6 class="mb-1">{{ row['Source']}} </h6>
+                                                    </td>
+                                                    <td>
+                                                        <h6 class="mb-1">{{ row['Campaign']}} </h6>
+                                                    </td>
+                                                    <td>
+                                                        <h6 class="text-muted"><i class="fas fa-circle text-c-green f-10 m-r-15"></i>{{ row['Created at'] }}</h6>
+                                                    </td>
+                                                    <td> <h6 class="mb-1">{{row['State']}}</h6> </td>
+                                                    <td><a href="{{row['Request new coupon code URL']}}" class="label theme-bg2 text-white f-12">Request New</a><a href="{{row['Email Jonny']}}" class="label theme-bg text-white f-12">Email Jonny</a></td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--[ Recent Users ] end-->
+                        <!-- [ statistics company chart ] start -->
+                    </div>
+
+
+                        <!-- [ statistics year chart ] end -->
+                        <!--[social-media section] start-->
+                        <!--[social-media section] end-->
+                        <!-- [ rating list ] starts-->
+                        <!-- [ rating list ] end-->
+                        <div class="col-xl-12 col-md-12 m-b-30">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Brands</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Campaigns</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Verification Types</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Brand</th>
+                                                <th>Campaigns</th>
+                                                <th>Users</th>
+                                                <th>Verification Types</th>
+                                                <th>Verified (%)</th>
+                                                <th class="text-right"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for key, row in brand_df.iterrows() %}
+                                            <tr>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['brand'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['campaigns'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['users'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['verification_types'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['percent_verified'] }}</h6>
+                                                </td>
+
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Campaign</th>
+                                                <th>Brands</th>
+                                                <th>Users</th>
+                                                <th>Verification Types</th>
+                                                <th>Verified (%)</th>
+                                                <th class="text-right"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for key, row in campaign_df.iterrows() %}
+                                            <tr>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['campaign'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['brands'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['users'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['verification_types'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['percent_verified'] }}</h6>
+                                                </td>
+
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Verification Type</th>
+                                                <th>Campaigns</th>
+                                                <th>Brands</th>
+                                                <th>Users</th>
+                                                <th>Verified (%)</th>
+                                                <th class="text-right"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           {% for key, row in type_df.iterrows() %}
+                                            <tr>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['type'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['campaigns'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['brands'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['users'] }}</h6>
+                                                </td>
+                                                <td>
+                                                    <h6 class="m-0">{{ row['percent_verified'] }}</h6>
+                                                </td>
+
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- [ Main Content ] end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="/static/assets/plugins/chart-morris/js/raphael.min.js"></script>
+    <script src="/static/assets/plugins/chart-morris/js/morris.min.js"></script>
+    <script src="/static/assets/js/pages/index.js"></script>
+
+{% endblock javascripts %}

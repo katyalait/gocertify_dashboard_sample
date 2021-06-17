@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gocertify-datatest",
+  "private_key_id": "d45bed6714817cc1669759cede90e86ff64235ae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDts4x+9xaipfE9\nFronbheWh8TCGH7BSpA+vJdj6DZ2p7f0gI5yS//S3GgV9Wom3n3qiwCDDnzdFtnk\nGLZ59WZfQVSrA0aMaFMLfnQKocUqBPz/EcgPxa7QoufUz0t21fuxUXK21AUE5ljR\nD0SJVjV3lafSwZs4QS9Dtg5ZgZV1w0fAKKimkpisOK/cTyHnnSzMSIr99MqS3o6p\nZGosUmo2vFNIHO2Ns8paTbx9wwHFbtuizZ3orJX/WdCGOO/ziPJgVsutCz03cbD4\nvfTo7YlaDe+fHEi0T2c8DdfdBUHCnZxu8nN3bYn7Q2lXazLRAKzOnhY/SUfX4tG8\nKMqWIMYzAgMBAAECggEASJIHJGI6mmiwWJa+ObiOYgpMY3fIBypFFKpOTBXCvwIg\nkvjGxJV4Yr+g1YdqI7jM15UdkGWVcIh/+HglCeIGobFX8Kgc21Qken9eXTqbb+M6\n/ILIwiv33cHGpr2tC/hzkeTMcY4UhDTxS85t/cIAq+RYautqAMhB7lnAUspRv7RK\n7MYbzSBMZB6Ok6WcadZ0hdO61qYSur4Jx2PeNon0LKQ5FzO/jPe9FRtOSNV9K/6+\nNftzHBZ0TscQHLhdwGbU9bZlGJ2SRLV3Appn0/LjRTUMGGJ+yuc3362ma8hTozJw\nHka2PwGijGrbkOsoxJwceHYApeKZy7ilmWuM00CsVQKBgQD3A6v0s5Lu4kzewFgh\n0YpgEx9sLj6JR3J8XRweFBMvXAPHXXrnZcTfj29Yky0/MaW5l5Qrl6yFm3U3mRGC\nvlwiLd93Hy3lOZs4gPSvzz/hxfMwzG5dB0/TZK7Jj3IBy+jLO3IEjag43PycUiZ6\n5IWYcYH4/NjUeSmwQeRMn+L03wKBgQD2WSZTbI1ZmZI4bDdhvcrqTPq4AJGwk+Ma\n/ITsRwWTKumAgTbT9czr3oKB7jv+S833eTRT2iGtOrjCGiCOZ/svV+Rf2GDFXL6u\nxGUNDjsYfuf97TbR9cLJeJUeNsQGFK7Z1BAVe5eH5CBhBkhgFElE7/WyfYcbhlrl\nDEvfEZilLQKBgD6x5eEz+uU69vvKohPjVVXRRLZ2flTll39NOqe/vKbWmfbuGRXG\nVNPRWheHM4LInSGgAXGXC6jVrkiwRyuCGWxrbD6V4VY+6tDKmlBNMA+j6HfIS3K9\nOluTQHHUQMGH+cwriGLzeXEFVfBvQWkLu4TXun9x3a8AGb6s2r9ADaDNAoGBAO3o\n0vamUyxA/9G10RZ38MuuZEPnaMwbRqz9SnHVdTDXtIICSC0TqT/xuCA7L307QELL\nrxl8BCIEIAJ0sRRWn2LtgwR9N5fjJdQqn1yobbIOfYXh3ZuPuPpRldGEGnO07dg4\n0P+uSH1Yd1y8cJE5hjkpdSNXz29ppcamxW880ypRAoGBAJuaXIdNOcq8tDO0mpHk\n7LMhj13g8Hpm6yGMPjDn5r4jPcOdm4jP7fTqzGd0J8RJXLrWadgzh0LT3XTLoXSl\nq5FzLYWxBGRdmZ/owGypQJNMdLujL6aN2WclFlXTAEM8pFBiI3L0cWXGALd9i0vD\nv5lqmL+iaQDXy9ciIyNoOzZJ\n-----END PRIVATE KEY-----\n",
+  "client_email": "datatest-account@gocertify-datatest.iam.gserviceaccount.com",
+  "client_id": "115483291398973045967",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/datatest-account%40gocertify-datatest.iam.gserviceaccount.com"
+}
