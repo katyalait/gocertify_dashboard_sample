@@ -12,7 +12,7 @@ import gcsfs
 import os
 import pandas as pd
 
-CLOUD_STORAGE_BUCKET = os.environ['CLOUD_STORAGE_BUCKET']
+# CLOUD_STORAGE_BUCKET = os.environ['CLOUD_STORAGE_BUCKET']
 
 
 @blueprint.route('/index')
